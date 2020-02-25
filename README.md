@@ -14,4 +14,4 @@ Being a ground-up rebuild, BDPII is going to take some time to be brought to "pr
 
 ## BlueLib
 
-[BlueLib](backend/bluelib.js) is a simple library of functions that will allow easy acquisition of data from The Blue Alliances' API.
+[BlueLib](backend/bluelib.js) is a simple library of functions that will allow easy acquisition of data from The Blue Alliances' API. Once completed, it will be moved to it's own repository.
