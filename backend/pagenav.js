@@ -15,4 +15,11 @@ $('a.nav-item.nav-page').each(function() {
     });
 });
 
+// Hide inactive pages.
 $('div.page:not(.active)').hide();
+
+// Use hash if needed.
+let hash = window.location.hash.substr(1);
+if (hash.length > 0) {
+    $(`a.nav-item.nav-page[data-page="${hash}"]`).click();
+}

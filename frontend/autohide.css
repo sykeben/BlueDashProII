@@ -8,10 +8,6 @@
     visibility: visible;
 }
 
-body.auto-cursor {
-    cursor: none;
-}
-
-body.auto-cursor.show {
-    cursor: unset;
-}
+body.auto-cursor, body.auto-cursor a { cursor: none; }
+body.auto-cursor.show { cursor: initial; }
+body.auto-cursor.show a:hover { cursor: pointer; }

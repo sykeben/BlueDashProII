@@ -1,10 +1,16 @@
-// Update function.
+// API object.
+var api = new TBA();
+
+// Update function (runs every 10 seconds).
 function updateDashboard() {
 
-    // Run again in 10 seconds.
+    // Last updated text.
+    $('#lastupdated-dash').text(new Date().toLocaleTimeString());
+
+    // Run again.
     setTimeout(updateDashboard, 10000);
 
 }
 
-// Run update to kickoff auto-update.
-updateDashboard();
+// Run update function after a couple seconds.
+setTimeout(updateDashboard, 2500);

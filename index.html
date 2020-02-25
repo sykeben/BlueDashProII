@@ -5,7 +5,7 @@
     <head>
 
         <meta charset="utf-8">
-        <title>BlueDashProII</title>
+        <title>BlueDashPro&#8545;</title>
 
         <!-- Vendor Libraries -->
         <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
@@ -17,15 +17,15 @@
 
     </head>
 
-    <body class="auto-cursor">
+    <body class="auto-cursor bg-super-dark text-light noselect">
 
         <!-- Navbar -->
-        <nav class="auto-hide navbar navbar-expand navbar-dark bg-dark shadow-sm border-bottom border-dark">
+        <nav class="auto-hide navbar navbar-expand navbar-dark bg-primary shadow-sm border-bottom border-dark">
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link nav-page active" href="#" data-page="dashboard">Dashboard</a>
-                    <a class="nav-item nav-link nav-page" href="#" data-page="settings">Settings</a>
-                    <a class="nav-item nav-link nav-page" href="#" data-page="about">About</a>
+                    <a class="nav-item nav-link nav-page active" href="#dashboard" data-page="dashboard">Dashboard</a>
+                    <a class="nav-item nav-link nav-page" href="#settings" data-page="settings">Settings</a>
+                    <a class="nav-item nav-link nav-page" href="#about" data-page="about">About</a>
                 </div>
             </div>
         </nav>
@@ -33,21 +33,64 @@
         <!-- Dashboard -->
         <div class="container-fluid page active px-5" data-page="dashboard">
 
-            <h1>Dashboard</h1>
+            <!-- Last Update -->
+            <div class="row mt-n5 pt-2 lead">
+                Last updated&nbsp;<span id="lastupdated-dash">never</span>.
+            </div>
 
         </div>
 
         <!-- Settings -->
-        <div class="container-fluid page px-5" data-page="settings">
+        <div class="container page px-5 text-center" data-page="settings">
 
-            <h1>Settings</h1>
+            <!-- Last Modified -->
+            <p class="lead pt-2">Last modified <span id="lastmodified-field">never</span>.</p>
+
+            <!-- API Key -->
+            <label class="mt-5">API Key</label><br>
+            <input type="text" autocomplete="off" class="form-control bg-dark border-dark text-light" id="apikey-field" style="max-width: 25rem; margin-left: auto; margin-right: auto;">
+
+            <!-- Team Number -->
+            <label class="mt-5">Team Number</label><br>
+            <input type="number" autocomplete="off" class="form-control bg-dark border-dark text-light" id="teamnumber-field" style="max-width: 25rem; margin-left: auto; margin-right: auto;"> 
+            
+            <!-- Save Button -->
+            <button class="mt-5 py-2 btn btn-dark" style="min-width: 10rem;" onclick="saveSettings();">Save</button>
 
         </div>
 
         <!-- About -->
-        <div class="container-fluid page px-5" data-page="about">
+        <div class="container page px-5 text-center" data-page="about">
 
-            <h1>About</h1>
+            <!-- Title -->
+            <div class="my-5 pb-4">
+                <h1 class="display-3">BlueDashPro&#8545;</h1>
+                <p>&copy; 2020 - Benjamin Sykes</p>
+            </div>
+
+            <!-- Divider -->
+            <hr class="border-dark mx-5 px-5">
+
+            <!-- Library List -->
+            <div class="my-5 py-4">
+                <h1 class="font-weight-lighter mb-2">Libraries Used</h1>
+                <div class="lead">
+                    <a href="https://jquery.com" class="text-light mx-2">jQuery</a>
+                    <a href="https://popper.js.org" class="text-light mx-2">PopperJS</a>
+                    <a href="https://getbootstrap.com" class="text-light mx-2">Bootstrap</a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="border-dark mx-5 px-5">
+
+            <!-- API Credit -->
+            <div class="my-5 py-4">
+                <h1 class="font-weight-lighter mb-2">The Blue Alliance API</h1>
+                <div class="lead">
+                    Thank you to TBA for creating their <a href="https://www.thebluealliance.com/apidocs/v3" class="text-light">v3 API</a>.
+                </div>
+            </div>
 
         </div>
 
@@ -61,6 +104,7 @@
         <script src="backend/dashboard.js"></script>
         <script src="backend/pagenav.js"></script>
         <script src="backend/autohide.js"></script>
+        <script src="backend/settings.js"></script>
 
     </body>
 
