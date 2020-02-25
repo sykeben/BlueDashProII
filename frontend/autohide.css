@@ -1,0 +1,17 @@
+.auto-hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.auto-hide.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.auto-cursor {
+    cursor: none;
+}
+
+body.auto-cursor.show {
+    cursor: unset;
+}

@@ -10,9 +10,46 @@
         <!-- Vendor Libraries -->
         <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
 
+        <!-- Frontend -->
+        <link rel="stylesheet" href="frontend/bootmod.css">
+        <link rel="stylesheet" href="frontend/pagenav.css">
+        <link rel="stylesheet" href="frontend/autohide.css">
+
     </head>
 
-    <body>
+    <body class="auto-cursor">
+
+        <!-- Navbar -->
+        <nav class="auto-hide navbar navbar-expand navbar-dark bg-dark shadow-sm border-bottom border-dark">
+            <div class="collapse navbar-collapse">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link nav-page active" href="#" data-page="dashboard">Dashboard</a>
+                    <a class="nav-item nav-link nav-page" href="#" data-page="settings">Settings</a>
+                    <a class="nav-item nav-link nav-page" href="#" data-page="about">About</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dashboard -->
+        <div class="container-fluid page active px-5" data-page="dashboard">
+
+            <h1>Dashboard</h1>
+
+        </div>
+
+        <!-- Settings -->
+        <div class="container-fluid page px-5" data-page="settings">
+
+            <h1>Settings</h1>
+
+        </div>
+
+        <!-- About -->
+        <div class="container-fluid page px-5" data-page="about">
+
+            <h1>About</h1>
+
+        </div>
 
         <!-- Vendor Libraries -->
         <script src="vendor/jquery/jquery.min.js"></script>
@@ -21,6 +58,9 @@
 
         <!-- Backend -->
         <script src="backend/bluelib.js"></script>
+        <script src="backend/dashboard.js"></script>
+        <script src="backend/pagenav.js"></script>
+        <script src="backend/autohide.js"></script>
 
     </body>
 
