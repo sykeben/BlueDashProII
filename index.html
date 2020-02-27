@@ -33,19 +33,28 @@
         <!-- Dashboard -->
         <div class="container-fluid page active px-5" data-page="dashboard">
 
-            <!-- Last Update -->
-            <div class="row mt-n5 pt-2 lead">
-                <div class="vw-100 text-center">
-                    Last updated&nbsp;<span id="lastupdated-dash">never</span>.
+            <!-- Meta -->
+            <div class="row mt-n5 pt-2 lead text-muted auto-hide hide-invert">
+
+                <!-- Event Key -->
+                <div class="col-6 text-center text-muted">
+                    Show data for current event, <span id="eventkey">?</span>.
                 </div>
+
+                <!-- Last Update -->
+                <div class="col-6 text-center text-muted">
+                    Last updated&nbsp;<span id="lastupdated-dash">never</span> (<span id="updatecount">0</span> time<span id="updatecount-suffix">s</span>).
+                </div>
+
             </div>
 
             <!-- Match Information -->
             <div class="row my-3 px-5">
 
                 <!-- Last Match -->
-                <div class="col-6 px-5">
+                <div class="col-6 px-5 ml-n2 mr-2">
 
+                    <!-- Title -->
                     <h1 class="text-center display-2 py-5">Last Match</h1>
 
                     <!-- Alliances -->
@@ -75,7 +84,7 @@
                 </div>
 
                 <!-- Next Match -->
-                <div class="col-6 px-5">
+                <div class="col-6 px-5 ml-2 mr-n2">
                     
                     <!-- Title -->
                     <h1 class="text-center display-2 py-5">Next Match</h1>
@@ -108,7 +117,35 @@
 
             </div>
 
+            <!-- Scoring & Rank -->
+            <div class="row my-3 px-5">
+
+                <!-- Last Match Score -->
+                <div class="col-6 px-5 ml-n2 mr-2">
+
+                    <table class="table table-dark table-borderless bg-super-dark rounded">
+                        <tbody class="display-3 text-center rounded">
+                            <tr class="rounded">
+                                <td class="rounded-left text-danger" id="last-red-score">?</td>
+                                <td class="rounded-right text-primary" id="last-blue-score">?</td>
+                            </tr>
+                        </body>
+                    </table>
+
+                </div>
+
+                <!-- Rank -->
+                <div class="col-6 px-5 ml-2 mr-n2 display-4 text-center">
+                    
+                    <label class="mt-2">Rank: </label>
+                    <span id="rank">?</span>
+
+                </div>
+
+            </div>
+
         </div>
+        
 
         <!-- Settings -->
         <div class="container page px-5 text-center" data-page="settings">

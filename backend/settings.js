@@ -33,6 +33,10 @@ function saveSettings() {
     localStorage.setItem('apiKey', $('#apikey-field').val());
     api.apiKey = $('#apikey-field').val();
     localStorage.setItem('teamNumber', $('#teamnumber-field').val());
+    api.teamNumber = $('#teamnumber-field').val();
+
+    // Reload dashboard.
+    updateDashboard();
 
 }
 
@@ -46,5 +50,6 @@ function loadSettings() {
     $('#apikey-field').val(localStorage.getItem('apiKey'));
     api.apiKey = localStorage.getItem('apiKey');
     $('#teamnumber-field').val(Number(localStorage.getItem('teamNumber')));
+    api.teamNumber = localStorage.getItem('teamNumber');
 
 }

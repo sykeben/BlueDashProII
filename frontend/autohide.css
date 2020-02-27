@@ -8,6 +8,16 @@
     visibility: visible;
 }
 
+.auto-hide.hide-invert {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.auto-hide.hide-invert.show {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
 body.auto-cursor, body.auto-cursor a { cursor: none; }
 body.auto-cursor.show { cursor: initial; }
 body.auto-cursor.show a:hover { cursor: pointer; }

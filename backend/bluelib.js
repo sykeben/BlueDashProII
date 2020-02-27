@@ -13,9 +13,14 @@ var TBA = function(apiKey, teamNumber) {
     this.teamNumber = teamNumber;
 
     // Base GET function, this is what all other requests will build off of.
+    // Callback will only be run if data isn't null.
     this.get = function(url, callback) {
         let requestURL = base + url + '?X-TBA-Auth-Key=' + encodeURI(this.apiKey);
-        $.getJSON(requestURL, callback);
+        $.getJSON(requestURL, function(data) {
+            if (data !== null) {
+                callback(data);
+            }
+        });
     };
 
     // Status, gets the status of TBA.
