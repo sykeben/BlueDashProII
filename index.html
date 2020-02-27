@@ -41,16 +41,69 @@
             </div>
 
             <!-- Match Information -->
-            <div class="row my-3">
+            <div class="row my-3 px-5">
 
                 <!-- Last Match -->
-                <div class="col-6">
-                    <h1 class="text-center display-3">Last Match</h1>
+                <div class="col-6 px-5">
+
+                    <h1 class="text-center display-2 py-5">Last Match</h1>
+
+                    <!-- Alliances -->
+                    <table class="table table-striped table-dark table-borderless rounded shadow-sm">
+                        <thead class="display-3 text-center thead-dark rounded-top">
+                            <tr class="rounded-top">
+                                <th class="font-weight-light bg-danger rounded-top-left" scope="col">Red</th>
+                                <th class="font-weight-light bg-primary rounded-top-right" scope="col">Blue</th>
+                            </tr>
+                        </thead>
+                        <tbody class="display-4 text-center rounded-bottom">
+                            <tr>
+                                <td class="py-3" id="last-red-1">?</td>
+                                <td class="py-3" id="last-blue-1">?</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3" id="last-red-2">?</td>
+                                <td class="py-3" id="last-blue-2">?</td>
+                            </tr>
+                            <tr class="rounded-bottom">
+                                <td class="py-3 rounded-bottom-left" id="last-red-3">?</td>
+                                <td class="py-3 rounded-bottom-right" id="last-blue-3">?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                 </div>
 
                 <!-- Next Match -->
-                <div class="col-6">
-                    <h1 class="text-center display-3">Next Match</h1>
+                <div class="col-6 px-5">
+                    
+                    <!-- Title -->
+                    <h1 class="text-center display-2 py-5">Next Match</h1>
+
+                    <!-- Alliances -->
+                    <table class="table table-striped table-dark table-borderless rounded shadow-sm">
+                        <thead class="display-3 text-center thead-dark rounded-top">
+                            <tr class="rounded-top">
+                                <th class="font-weight-light bg-danger rounded-top-left" scope="col">Red</th>
+                                <th class="font-weight-light bg-primary rounded-top-right" scope="col">Blue</th>
+                            </tr>
+                        </thead>
+                        <tbody class="display-4 text-center rounded-bottom">
+                            <tr>
+                                <td class="py-3" id="next-red-1">?</td>
+                                <td class="py-3" id="next-blue-1">?</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3" id="next-red-2">?</td>
+                                <td class="py-3" id="next-blue-2">?</td>
+                            </tr>
+                            <tr class="rounded-bottom">
+                                <td class="py-3 rounded-bottom-left" id="next-red-3">?</td>
+                                <td class="py-3 rounded-bottom-right" id="next-blue-3">?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                 </div>
 
             </div>
@@ -65,11 +118,11 @@
 
             <!-- API Key -->
             <label class="mt-5">API Key</label><br>
-            <input type="text" autocomplete="off" class="form-control bg-dark border-dark text-light" id="apikey-field" style="max-width: 25rem; margin-left: auto; margin-right: auto;">
+            <input type="text" autocomplete="off" class="form-control bg-dark border-dark text-light autoshow-password" id="apikey-field" style="max-width: 25rem; margin-left: auto; margin-right: auto;">
 
             <!-- Team Number -->
             <label class="mt-5">Team Number</label><br>
-            <input type="number" autocomplete="off" class="form-control bg-dark border-dark text-light" id="teamnumber-field" style="max-width: 25rem; margin-left: auto; margin-right: auto;"> 
+            <input type="number" autocomplete="off" class="form-control bg-dark border-dark text-light autohide-counter" id="teamnumber-field" style="max-width: 25rem; margin-left: auto; margin-right: auto;"> 
             
             <!-- Save Button -->
             <button class="mt-5 py-2 btn btn-dark" style="min-width: 10rem;" onclick="saveSettings();">Save</button>
@@ -117,6 +170,7 @@
         <script src="vendor/bootstrap/bootstrap.min.js"></script>
 
         <!-- Backend -->
+        <script src="backend/bootmod.js"></script>
         <script src="backend/bluelib.js"></script>
         <script src="backend/dashboard.js"></script>
         <script src="backend/pagenav.js"></script>

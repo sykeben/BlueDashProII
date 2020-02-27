@@ -11,14 +11,25 @@ body { min-height: 100vh; }
   user-select: none;
 }
 
-input[type="number"] {
+input.autohide-counter {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   appearance: textfield;
 }
 
-input[type="number"]:focus {
+input.autohide-counter:focus {
   -moz-appearance: number-input;
   -webkit-appearance: number-input;
   appearance: number-input;
 }
+
+.display-5 {
+	font-size: 2.25rem;
+	font-weight: 300;
+	line-height: 1.1;
+}
+
+.rounded-top-left { border-top-left-radius: .25rem !important; }
+.rounded-top-right { border-top-right-radius: .25rem !important; }
+.rounded-bottom-left { border-bottom-left-radius: .25rem !important; }
+.rounded-bottom-right { border-bottom-right-radius: .25rem !important; }
