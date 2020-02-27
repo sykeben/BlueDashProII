@@ -8,9 +8,9 @@ Being a ground-up rebuild, BDPII is going to take some time to be brought to "pr
 
 - [x]  Road map Creation
 - [x]  Library Installation
-- [ ]  Backend Creation
-- [ ]  Frontend Creation
-- [ ]  Finalizations
+- [x]  Backend Creation
+- [x]  Frontend Creation
+- [x]  Finalizations
 
 ## BlueLib
 
