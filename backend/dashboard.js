@@ -30,10 +30,13 @@ function updateDashboard() {
         $('#rank').text(data.qual.ranking.rank);
         lastMatchKey = data.last_match_key;
         nextMatchKey = data.next_match_key;
-    })
+    });
 
     // Last Match.
     api.get(`/match/${lastMatchKey}/simple`, function(data) {
+
+        // Time.
+        $('#last-time').text(new Date(data.time).toLocaleTimeString());
 
         // Alliance team numbers.
         $('#last-red-1').text(data.alliances.red.team_keys[0].replace('frc', ''));
@@ -64,10 +67,13 @@ function updateDashboard() {
             $('#last-blue-score').css('font-weight', 'bold');
         }
 
-    })
+    });
 
     // Next Match.
     api.get(`/match/${nextMatchKey}/simple`, function(data) {
+
+        // Time.
+        $('#next-time').text(new Date(data.time).toLocaleTimeString());
 
         // Alliance team numbers.
         $('#next-red-1').text(data.alliances.red.team_keys[0].replace('frc', ''));
@@ -85,7 +91,7 @@ function updateDashboard() {
         autoBold('#next-blue-2');
         autoBold('#next-blue-3');
 
-    })
+    });
 
     // Last updated text & update counter.
     updateCount++;
