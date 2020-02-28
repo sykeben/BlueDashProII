@@ -29,6 +29,12 @@ input.autohide-counter:focus {
 	line-height: 1.1;
 }
 
+.display-6 {
+	font-size: 1.625rem;
+	font-weight: 300;
+	line-height: 1.075;
+}
+
 .rounded-top-left { border-top-left-radius: .25rem !important; }
 .rounded-top-right { border-top-right-radius: .25rem !important; }
 .rounded-bottom-left { border-bottom-left-radius: .25rem !important; }

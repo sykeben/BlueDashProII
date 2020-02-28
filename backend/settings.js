@@ -38,6 +38,14 @@ function saveSettings() {
     // Reload dashboard.
     updateDashboard();
 
+    // Update status.
+    $('#status-field').text('Wait...')
+
+    // Reload page after delay.
+    setTimeout(function() {
+        location.reload();
+    }, 1000);
+
 }
 
 // Load function.
