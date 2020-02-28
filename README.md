@@ -1,4 +1,4 @@
-# BlueDashProII
+# BlueDashProⅡ
 
 A successor to [BlueDashPro](https://github.com/sykeben/BlueDashPro), a dashboard for viewing FRC match results.
 
@@ -10,7 +10,7 @@ Being a ground-up rebuild, BDPII is going to take some time to be brought to "pr
 - [x]  Library Installation
 - [x]  Backend Creation
 - [x]  Frontend Creation
-- [x]  Finalizations
+- [ ]  Finalizations
 
 ## BlueLib
 
