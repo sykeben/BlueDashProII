@@ -3,7 +3,6 @@ var api = new TBA();
 
 // Variables.
 let updateCount = 0;
-let eventKey = 'None';
 let lastMatchKey = 'None';
 let nextMatchKey = 'None';
 
@@ -19,14 +18,8 @@ function autoBold(element) {
 // Update function (runs every 10 seconds).
 function updateDashboard() {
 
-    // Event Key.
-    api.get(`/team/frc${api.teamNumber}/events/${new Date().getFullYear()}/keys`, function(data) {
-        eventKey = data[0];
-        $('#eventkey').text(eventKey);
-    });
-
     // Event Status (Match Keys, Rank, Etc).
-    api.get(`/team/frc${api.teamNumber}/event/${eventKey}/status`, function(data) {
+    api.get(`/team/frc${api.teamNumber}/event/${api.eventKey}/status`, function(data) {
         $('#rank').text(data.qual.ranking.rank);
         lastMatchKey = data.last_match_key;
         nextMatchKey = data.next_match_key;

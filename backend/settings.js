@@ -11,6 +11,7 @@ if (!localStorage.getItem('BDPII')) {
     // User information.
     localStorage.setItem('apiKey', 'None');
     localStorage.setItem('teamNumber', 5980);
+    localStorage.setItem('eventKey', '2019misjo');
 
     // Reload settings.
     loadSettings();
@@ -33,7 +34,9 @@ function saveSettings() {
     localStorage.setItem('apiKey', $('#apikey-field').val());
     api.apiKey = $('#apikey-field').val();
     localStorage.setItem('teamNumber', $('#teamnumber-field').val());
-    api.teamNumber = $('#teamnumber-field').val();
+    api.eventKey = $('#teamnumber-field').val();
+    localStorage.setItem('eventKey', $('#eventkey-field').val());
+    api.eventKey = $('#eventkey-field').val();
 
     // Reload dashboard.
     updateDashboard();
@@ -59,5 +62,7 @@ function loadSettings() {
     api.apiKey = localStorage.getItem('apiKey');
     $('#teamnumber-field').val(Number(localStorage.getItem('teamNumber')));
     api.teamNumber = localStorage.getItem('teamNumber');
+    $('#eventkey-field').val(localStorage.getItem('eventKey'));
+    api.eventKey = localStorage.getItem('eventKey');
 
 }
