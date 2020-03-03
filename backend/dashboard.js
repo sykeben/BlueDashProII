@@ -31,7 +31,7 @@ function updateDashboard() {
         // Time & Number.
         $('#last-type').text(data.comp_level.toUpperCase());
         $('#last-number').text(data.match_number);
-        $('#last-time').text(new Date(data.actual_time).toLocaleTimeString());
+        $('#last-time').text(new Date(data.actual_time*1000).toLocaleTimeString());
 
         // Alliance team numbers.
         $('#last-red-1').text(data.alliances.red.team_keys[0].replace('frc', ''));
@@ -70,7 +70,7 @@ function updateDashboard() {
         // Time & Number.
         $('#next-type').text(data.comp_level.toUpperCase());
         $('#next-number').text(data.match_number);
-        $('#next-time').text(new Date(data.predicted_time).toLocaleTimeString());
+        $('#next-time').text(new Date(data.predicted_time*1000).toLocaleTimeString());
 
         // Alliance team numbers.
         $('#next-red-1').text(data.alliances.red.team_keys[0].replace('frc', ''));
