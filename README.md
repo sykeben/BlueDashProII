@@ -21,3 +21,7 @@ Being a ground-up rebuild, BDPII is going to take some time to be brought to "pr
 - As of now, it seems like the dash takes around 3 updates to fully initialize and begin pulling all the data at the same time. This may be due to the way it updates and pulls match IDs without regard to order.
 - The transitions aren't as nice as they could be, but it's fine for now.
 - The times seem to be inacurate, but that must be due to prediction errors on TBA's end.
+
+## Special Thanks
+
+- **@TechplexEngineer**: fixed time issues by converting TBA times from Unix (seconds) to Javascript (milliseconds).

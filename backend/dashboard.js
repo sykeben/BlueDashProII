@@ -29,6 +29,7 @@ function updateDashboard() {
     api.get(`/match/${lastMatchKey}/simple`, function(data) {
 
         // Time & Number.
+        // Thank you @TechplexEngineer! https://github.com/TechplexEngineer
         $('#last-type').text(data.comp_level.toUpperCase());
         $('#last-number').text(data.match_number);
         $('#last-time').text(new Date(data.actual_time*1000).toLocaleTimeString());
@@ -68,6 +69,7 @@ function updateDashboard() {
     api.get(`/match/${nextMatchKey}/simple`, function(data) {
 
         // Time & Number.
+        // Thank you @TechplexEngineer! https://github.com/TechplexEngineer
         $('#next-type').text(data.comp_level.toUpperCase());
         $('#next-number').text(data.match_number);
         $('#next-time').text(new Date(data.predicted_time*1000).toLocaleTimeString());
