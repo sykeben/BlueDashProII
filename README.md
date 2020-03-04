@@ -26,4 +26,4 @@ Being a ground-up rebuild, BDPⅡ is going to take some time to be brought to "p
 
 - **@TechplexEngineer**: fixed time issues by converting TBA times from Unix (seconds) to Javascript (milliseconds).
 
-# [View BDPⅡ Here](https://sykeben.github.io/BlueDashProII)
+## [View BDPⅡ Here](https://sykeben.github.io/BlueDashProII)
